@@ -1,4 +1,5 @@
 import React, { EventHandler, FormEvent, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function LoginForm(): JSX.Element {
@@ -11,8 +12,15 @@ function LoginForm(): JSX.Element {
 
 
     return (
-            <div className="w-[400px] h-full rounded-[10px] shadow-md shadow-gray-200">
+            <div className="w-[400px] h-[550px] rounded-[10px] shadow-md shadow-gray-400">
                 <form className="w-full h-full flex flex-col justify-center items-center gap-5 relative">
+                <div className="flex justify-center items-center bg-blue-700 w-full h-10 absolute top-0
+                        rounded-t-[10px]">
+                    <Link to={'/login'} className="block w-1/2 h-full text-center text-white text-center
+                        hover:rounded-tl-[10px] pt-2">ورود</Link>
+                    <Link to={'/register'} className="block w-1/2 h-full text-center text-white text-center bg-blue-500
+                    hover:bg-blue-600 rounded-tr-[10px] pt-2">ثبت نام</Link>
+                </div>
                     <h1 className="pb-8 font-semibold">ورود به حساب کاربری</h1>
                     <div className="">
                         <label htmlFor="" className="block w-full rtl mb-3 text-right text-sm">نام کاربری</label>

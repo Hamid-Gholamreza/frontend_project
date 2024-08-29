@@ -5,7 +5,7 @@ import LoginForm from "../components/LoginForm";
 function login(): JSX.Element {
 
     return (
-        <div className="w-full h-[100vh] flex justify-center">
+        <div className="w-full h-[100vh] flex justify-center items-center">
             <LoginForm />
         </div>
     );
