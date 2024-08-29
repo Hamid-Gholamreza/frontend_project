@@ -16,9 +16,8 @@ function LoginForm(): JSX.Element {
                 <form className="w-full h-full flex flex-col justify-center items-center gap-5 relative">
                 <div className="flex justify-center items-center bg-blue-700 w-full h-10 absolute top-0
                         rounded-t-[10px]">
-                    <Link to={'/login'} className="block w-1/2 h-full text-center text-white text-center
-                        hover:rounded-tl-[10px] pt-2">ورود</Link>
-                    <Link to={'/register'} className="block w-1/2 h-full text-center text-white text-center bg-blue-500
+                    <Link to={'/login'} className="block w-1/2 h-full text-center text-white hover:rounded-tl-[10px] pt-2">ورود</Link>
+                    <Link to={'/register'} className="block w-1/2 h-full text-center text-white bg-blue-500
                     hover:bg-blue-600 rounded-tr-[10px] pt-2">ثبت نام</Link>
                 </div>
                     <h1 className="pb-8 font-semibold">ورود به حساب کاربری</h1>
