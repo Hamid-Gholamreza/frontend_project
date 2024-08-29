@@ -1,11 +1,12 @@
 import React from "react";
+import LoginForm from "../components/LoginForm";
 
 
 function login(): JSX.Element {
 
     return (
-        <div>
-
+        <div className="w-full h-[100vh] flex justify-center">
+            <LoginForm />
         </div>
     );
 }
