@@ -1,11 +1,11 @@
 import React from "react";
-import RegisterationForm from "../components/RegistrationForm";
+import RegistrationForm from "../components/auth/RegistrationForm";
 
 function register():JSX.Element {
 
     return(
         <div className="w-full h-[100vh] flex justify-center items-center">
-            <RegisterationForm />
+            <RegistrationForm />
         </div>
     )
 }
