@@ -3,13 +3,21 @@ import axios from "axios";
 import HouseAdCard from "../components/HouseAdsCard";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import PaginationItem from '@mui/material/PaginationItem';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import backgroundImg from '../images/home-background.jpg';
+
 
 interface advert {
+    id: number,
     location: string,
     phone: string,
     description: string,
-    urgent: boolean
+    urgent: boolean,
+    type: string
 }
+
 
 
 function Homepage({}) {
@@ -20,9 +28,8 @@ function Homepage({}) {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/ads?_page=${page}&_per_page=3`);
-            setTotalPages(response.data.pages)
-            console.log(response.data.pages)
+            const response = await axios.get(`http://localhost:8000/ads?_page=${page}&_per_page=7`);
+            setTotalPages(response.data.pages);
             const list = response.data.data.map((item: advert, index: number) => {
                 return (
                     <HouseAdCard key={index} ad={item} />
@@ -51,8 +58,10 @@ function Homepage({}) {
 
             </div>                
             <div className="w-1/2">
-                    <Stack spacing={2} className="w-full flex justify-center items-center">
-                        <Pagination count={totalPages} shape="rounded" page={page} onChange={handlePageChange} />
+                    <Stack spacing={2} className="w-full flex justify-center items-center" dir="rtl">
+                        <Pagination count={totalPages} shape="rounded" page={page} onChange={handlePageChange}
+                            renderItem={(item) => (
+                            <PaginationItem components={{ previous: ArrowForwardIcon, next: ArrowBackIcon }} {...item} /> )} />
                     </Stack>
             </div>
         </div>

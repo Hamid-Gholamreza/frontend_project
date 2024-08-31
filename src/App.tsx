@@ -5,6 +5,7 @@ import { Routes } from 'react-router';
 import login from './pages/login';
 import register from './pages/register';
 import Homepage from './pages/homepage';
+import HouseAdPage from './pages/houseAdPage';
 
 
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/login' Component={login} />
         <Route path='/register' Component={register} />
         <Route path='/home' Component={Homepage} />
+        <Route path='/ad/:id' Component={HouseAdPage} />
       </Routes>
     </Router>
   );
