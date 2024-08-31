@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import HouseAdCard from "../components/HouseAdsCard";
-import PaginationRounded from "../components/PaginationRounded";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
@@ -49,9 +48,12 @@ function Homepage({}) {
         <div className="w-full h-[100vh] flex flex-col justify-center items-center">
             <div className="w-1/2">
                 {items}
-                <Stack spacing={2}>
-                    <Pagination count={totalPages} shape="rounded" page={page} onChange={handlePageChange}  />
-                </Stack>
+
+            </div>                
+            <div className="w-1/2">
+                    <Stack spacing={2} className="w-full flex justify-center items-center">
+                        <Pagination count={totalPages} shape="rounded" page={page} onChange={handlePageChange} />
+                    </Stack>
             </div>
         </div>
     )

@@ -2,6 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --normal-font: 'IRANSansX', 'sans-serif';
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: bolder;
+  font-weight: 900;
+  font-display: swap;
+  src: local('IRANSansXExtraBold'), url('./fonts/IRANSansXExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: local('IRANSansXBold'), url('./fonts/IRANSansXBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-weight: 600;
+  font-display: swap;
+  src: local('IRANSansXDemiBold'), url('./fonts/IRANSansXDemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('IRANSansXMedium'), url('./fonts/IRANSansXMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-weight: 400;
+  font-display: swap;
+  src: local('IRANSansXRegular'), url('./fonts/IRANSansXRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: lighter;
+  font-weight: 300;
+  font-display: swap;
+  src: local('IRANSansXUltraLight'), url('./fonts/IRANSansXUltraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: thin;
+  font-weight: 100;
+  font-display: swap;
+  src: local('IRANSansXThin'), url('./fonts/IRANSansXThin.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--normal-font);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
