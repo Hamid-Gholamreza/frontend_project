@@ -7,6 +7,7 @@ import PaginationItem from '@mui/material/PaginationItem';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Header from "../components/Header";
+import backgroundImage from '../images/home-background.png';
 
 
 interface advert {
@@ -16,7 +17,10 @@ interface advert {
     title: string,
     urgent: boolean,
     type: string,
-    description: string
+    description: string,
+    numOfRooms: number,
+    size: number,
+    yearBuilt: number
 }
 
 
@@ -55,19 +59,24 @@ function Homepage({}) {
       };
 
     return(
-        <div className="w-full h-[100vh] flex flex-col justify-start items-center gap-[40px]">
-            <div className="w-full h-[60px] bg-yellow-400">
-                <Header />
+        <div className="w-full h-[100vh] relative flex justify-center items-center">
+            <div className="absolute w-full h-full">
+                <img src={backgroundImage} alt="" className="w-full" />
             </div>
-            <div className="w-1/2">
-                {items}
-            </div>                
-            <div className="w-1/2">
+            <div className="w-full flex flex-col justify-start items-center gap-[40px] absolute top-0 left-0 ">
+                <div className="w-full h-[50px] bg-yellow-400">
+                    <Header />
+                </div>
+                <div className="w-1/2 bg-white p-6 rounded-2xl mt-8">
+                    {items}
+                    <div className="bg-white">
                     <Stack spacing={2} className="w-full flex justify-center items-center" dir="rtl">
                         <Pagination count={totalPages} shape="rounded" page={page} onChange={handlePageChange}
-                            renderItem={(item) => (
-                            <PaginationItem components={{ previous: ArrowForwardIcon, next: ArrowBackIcon }} {...item} /> )} />
+                          renderItem={(item) => (
+                        <PaginationItem components={{ previous: ArrowForwardIcon, next: ArrowBackIcon }} {...item} /> )} />
                     </Stack>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -42,7 +42,7 @@ function RegistrationForm(): JSX.Element {
                     <Link to={'/register'} className="block w-1/2 h-full text-center text-white bg-blue-700
                     rounded-tr-[10px] pt-2">ثبت نام</Link>
                 </div>
-                <h1 className="py-5 font-semibold">ثبت نام</h1>
+                <h1 className="pt-8 font-semibold">ثبت نام</h1>
                 <div className="">
                     <label htmlFor="" className="block w-full rtl mb-3 text-right text-sm">نام کاربری</label>
                     <input type="text" className="pr-4 rounded-[50px] w-[270px] h-8 border-[2px] border-blue-500 text-right text-sm
