@@ -6,14 +6,13 @@ import Stack from '@mui/material/Stack';
 import PaginationItem from '@mui/material/PaginationItem';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import backgroundImg from '../images/home-background.jpg';
 
 
 interface advert {
     id: number,
     location: string,
     phone: string,
-    description: string,
+    title: string,
     urgent: boolean,
     type: string
 }

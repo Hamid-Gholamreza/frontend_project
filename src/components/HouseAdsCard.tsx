@@ -10,7 +10,7 @@ interface Advert {
     id: number,
     location: string,
     phone: string,
-    description: string,
+    title: string,
     urgent: boolean,
     type: string
 }
@@ -38,7 +38,7 @@ const HouseAdCard: React.FC<HouseAdCardProps> = ({ad}) => {
                      : null
                 }
                 <div className="pr-4">
-                    <p className="text-center">{ad.description}</p>
+                    <p className="text-center">{ad.title}</p>
                 </div>
             </Link>
         </div>
