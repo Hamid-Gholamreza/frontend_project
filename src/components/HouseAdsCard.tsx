@@ -12,7 +12,8 @@ interface Advert {
     phone: string,
     title: string,
     urgent: boolean,
-    type: string
+    type: string,
+    description: string
 }
 
 interface HouseAdCardProps {
