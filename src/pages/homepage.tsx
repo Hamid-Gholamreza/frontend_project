@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 import PaginationItem from '@mui/material/PaginationItem';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Header from "../components/Header";
 
 
 interface advert {
@@ -21,6 +22,7 @@ interface advert {
 
 
 function Homepage({}) {
+
 
     const [items, setItems] = useState<JSX.Element[]>([]);
     const [page, setPage] = useState(1);
@@ -42,6 +44,7 @@ function Homepage({}) {
         }
     }
 
+
     useEffect(() => {
         fetchData();
 
@@ -52,10 +55,12 @@ function Homepage({}) {
       };
 
     return(
-        <div className="w-full h-[100vh] flex flex-col justify-center items-center">
+        <div className="w-full h-[100vh] flex flex-col justify-start items-center gap-[40px]">
+            <div className="w-full h-[60px] bg-yellow-400">
+                <Header />
+            </div>
             <div className="w-1/2">
                 {items}
-
             </div>                
             <div className="w-1/2">
                     <Stack spacing={2} className="w-full flex justify-center items-center" dir="rtl">
